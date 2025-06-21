@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DTS_portfolio/static/css/main.6d9dea08.css",
+    "main.js": "/DTS_portfolio/static/js/main.dd8dd512.js",
+    "index.html": "/DTS_portfolio/index.html",
+    "main.6d9dea08.css.map": "/DTS_portfolio/static/css/main.6d9dea08.css.map",
+    "main.dd8dd512.js.map": "/DTS_portfolio/static/js/main.dd8dd512.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d9dea08.css",
+    "static/js/main.dd8dd512.js"
+  ]
+}
