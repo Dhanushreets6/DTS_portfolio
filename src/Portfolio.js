@@ -8,8 +8,8 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <div className="relative h-[90vh] md:h-screen overflow-hidden">
-        <img
-          src="/background.jpg"
+        <img 
+        src={process.env.PUBLIC_URL + '/background.jpg'}
           alt="Hero Background"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -46,6 +46,9 @@ export default function Portfolio() {
   <p>Height: 5'5"</p>
   <p>Education: Engineer (CS)</p>
   <p>Occupation: Aspiring and<br/> Respected Actress</p>
+  <p>Location: Bengaluru</p>
+  <p>Father: Advocate</p>
+  <p>Mother: Homemaker</p>
 </motion.div>
       </div>
 
@@ -60,7 +63,7 @@ export default function Portfolio() {
   viewport={{ once: true }}
   transition={{ staggerChildren: 0.15 }}
 >
-  {[1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15,16,17,18].map((num) => (
+  {[1, 2,3 , 4, 5, 6, 7, 8,9,10,11,12,13,14,15,16].map((num) => (
     <motion.div
       key={num}
       variants={{
@@ -73,7 +76,7 @@ export default function Portfolio() {
     >
       {/* Blurred background */}
       <img
-        src={`/image${num}.jpg`}
+        src={process.env.PUBLIC_URL + `/image${num}.jpg`}
         alt={`Background ${num}`}
         className="absolute inset-0 w-full h-full object-cover opacity-20 blur-sm"
       />
@@ -82,11 +85,12 @@ export default function Portfolio() {
       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent z-10" />
 
       {/* Foreground image */}
-      <img
-        src={`/image${num}.jpg`}
-        alt={`Portfolio ${num}`}
-        className="relative z-20 w-full object-cover aspect-[3/4] rounded-2xl"
-      />
+<img
+  src={process.env.PUBLIC_URL + `/image${num}.jpg`} // ✅ UPDATED LINE
+  alt={`Portfolio ${num}`}
+  className="relative z-20 w-full object-cover aspect-[3/4] rounded-2xl"
+/>
+
     </motion.div>
   ))}
 
@@ -97,7 +101,7 @@ export default function Portfolio() {
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.6 }}
   >
-    ""Acting is my passion — I aspire to become a respected and inspiring heroine.""
+    "Acting is my passion — I aspire to become a respected and inspiring heroine."
   </motion.div>
 </motion.section>
 
@@ -106,7 +110,7 @@ export default function Portfolio() {
   <h2 className="text-1xl md:text-3xl font-bold text-center text-purple-800">My Introduction</h2>
   <div className="grid grid-cols-1 ">
     <video controls className="w-1/2 mx-auto rounded-lg shadow-md">
-      <source src="/DTS_intro.mp4" type="video/mp4" />
+      <source src={ process.env.PUBLIC_URL + "/DTS_intro.mp4"} type="video/mp4" />
     </video>
   </div>
 </section>
@@ -115,13 +119,13 @@ export default function Portfolio() {
   <h2 className="text-1xl md:text-3xl font-bold text-center text-purple-800">My Performances</h2>
   <div className="grid grid-cols-1 ">
      <video controls className="w-full rounded-lg shadow-md">
-      <source src="/DTS_acting1.mp4" type="video/mp4" />
+      <source src= { process.env.PUBLIC_URL + "/DTS_acting1.mp4"} type="video/mp4" />
     </video>
   </div>
 
   <div className="grid grid-cols-1 ">
     <video controls className="w-1/2 mx-auto rounded-lg shadow-md">
-      <source src="/DTS_2024video.mp4" type="video/mp4" />
+      <source src={ process.env.PUBLIC_URL +"/DTS_2024video.mp4"} type="video/mp4" />
     </video>
   </div>
 </section>
@@ -155,14 +159,14 @@ export default function Portfolio() {
             target="_blank"
             whileHover={{ scale: 1.2 }}
           >
-            <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
+            <img src={process.env.PUBLIC_URL +"/instagram.png"} alt="Instagram" className="w-6 h-6" />
           </motion.a>
           <motion.a
             href="https://www.youtube.com/@dtsmythsandtalks"
             target="_blank"
             whileHover={{ scale: 1.2 }}
           >
-            <img src="/youtube.png" alt="YouTube" className="w-6 h-6" />
+            <img src={process.env.PUBLIC_URL +"/youtube.png"} alt="YouTube" className="w-6 h-6" />
           </motion.a>
         </div>
         <p className="mt-4 text-sm text-gray-400">&copy; 2025 Dhanushree T S Gowda. All rights reserved.</p>
